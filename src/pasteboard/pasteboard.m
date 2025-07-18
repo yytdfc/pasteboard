@@ -322,19 +322,19 @@ PyDoc_STRVAR(
 static PyMethodDef pasteboard_methods[] = {
     {
         "get_contents",
-        (PyCFunction)pasteboard_get_contents,
+        (PyCFunction)(void(*)(void))pasteboard_get_contents,
         METH_VARARGS | METH_KEYWORDS,
         pasteboard_get_contents__doc__,
     },
     {
         "set_contents",
-        (PyCFunction)pasteboard_set_contents,
+        (PyCFunction)(void(*)(void))pasteboard_set_contents,
         METH_VARARGS | METH_KEYWORDS,
         pasteboard_set_contents__doc__,
     },
     {
         "get_file_urls",
-        (PyCFunction)pasteboard_get_file_urls,
+        (PyCFunction)(void(*)(void))pasteboard_get_file_urls,
         METH_VARARGS | METH_KEYWORDS,
         pasteboard_get_file_urls__doc__,
     },
